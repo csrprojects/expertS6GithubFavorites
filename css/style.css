@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff-primary: "Roboto", sans-serif;
+    --text-color: #fff;
+    --text-button: #F75A68;
+    --text-table: #E1E1E6;
+    --text-input: #7C7C8A;
+    --bg-input: #06181C;
+    --bg-th-table: #092D38;
+    --bg-tr-even: #06181C;
+    --bg-tr-odd: rgba(6, 22, 27, 0.5);
+    --bg-button: #065E7C;
+    --border-color: #4A808C;
+
+    
+    --heu: 194;
+    --primary-color: hsl(var(--heu), 100%, 63%);
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: rgba(0,0,0);
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+#app {
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 18.6rem 1fr;
+    margin: 11.5rem 0 8.7rem;
+    overflow: hidden;
+}
+
+header img {
+    width: 18.6rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.search input {
+    height: 4.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0 0.8rem;
+    width: 100%;
+    max-width: 46.2rem;
+    margin-right: 0.8rem;
+    background-color: var(--bg-input);
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.search input::placeholder {
+    color: var(--text-input);
+}
+
+.search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    border-radius: 0.5rem;
+    height: 4.8rem;
+    width: 17rem;
+    background-color: var(--bg-button);
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--text-color)
+}
+
+.search button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-button);
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+table td.repositories, 
+table td.followers, 
+table td p {
+    font-size: 2rem;
+    color: var(--text-table);
+    font-weight: bold;
+}
+
+table td.user > a {
+    color: var(--text-table);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+table th {
+    background: var(--bg-th-table);
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+}
+
+table td {
+    border-bottom: 1px solid var(--border-color);
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table td {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+table tr:nth-child(odd){
+    background: var(--bg-tr-odd);
+}
+
+table tr:nth-child(even){
+    background: var(--bg-tr-even);
+}
+
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+table .msgdefault {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    height: 50vh;
+}
+
+table .msgdefault p {
+    font-size: 4rem;
+    font-family: "Roboto Mono", monospace;
+    color: #4E5455;
+    font-weight: bold;
+}
+
+table .msgdefault img {
+    width: 13.2rem;
+    object-fit: cover;
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+    clip: rect(0,0,0);
+    white-space: nowrap;
+}
